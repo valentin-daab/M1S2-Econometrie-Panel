@@ -1,0 +1,268 @@
+---
+title:  |
+        |
+        |
+        |
+        |
+        |
+        | Les déterminants du prix de l'immobilier :
+        | une étude sur données de panel
+author: 
+  - DAAB Valentin
+date: 08/03/2022
+fontsize: 12pt
+margin: 2cm
+urlcolor: darkblue
+linkcolor: Mahogany
+citecolor: Mahogany
+spacing: single
+papersize: a4paper
+bibliography: bib.bib
+biblio-style: apalike
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    number_sections: yes
+    keep_tex: no
+    toc: no
+    toc_depth: 3
+    template: C:\Users\daabv\Desktop\GitHub1\markdown-templates\article\article-template.latex
+header-includes:
+   - \usepackage{float}
+---
+\vspace{10cm}
+\begin{center}
+Cours : Économétrie des données de panel
+
+Professeur : Mr. El OUARDIGHI
+\end{center}
+\pagenumbering{gobble}
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+#### LIBRARIES ####
+
+library(dplyr)
+library(ggplot2)
+library(data.table)
+library(ExPanDaR)
+library(panelr)
+library(skimr)
+library(stargazer)
+library(DataExplorer)
+library(plm)
+library(lmtest)
+library(kableExtra)
+library(plotly)
+library(pder)
+
+
+#### DATA ####
+data("HousePricesUS")
+df <- as.data.frame(HousePricesUS)
+
+# Enlever les colonnes non pertinentes
+df <- df %>% select(-c('state', 'plate', 'region', 'region.name'))
+
+#### STATISTIQUES ET EXPLORATION DES DONNEES ####
+
+# Valeurs manquantes
+prepare_missing_values_graph(df, ts_id = "year")
+
+# Statistiques descriptives
+stats1 <- prepare_descriptive_table(df, format = "latex")
+
+
+# Min Max Statistiques Descriptives
+stats <- prepare_ext_obs_table(df, cs_id = "names", ts_id = "year", var = "pop")
+stats2 <- stats$df
+
+# Trend Plot
+graph <- prepare_trend_graph(df, ts_id = "year", 'price')
+graph$plot
+
+# Corr Plot
+corr <- prepare_correlation_table(df, bold = 0.01, format="html")
+corr$df
+
+
+prepare_correlation_graph(df)
+
+
+# Scatter Plot
+prepare_scatter_plot(df, x="year", y="price", color="names", loess = 1)
+
+# Bar Chart
+bar <- prepare_by_group_bar_graph(df, by_var = "names", var = "price",
+                                  stat_fun = mean, order_by_stat = TRUE)
+bar$plot
+
+#### ESTIMATIONS WITHIN ####
+
+panel_df <- pdata.frame(df, index = c("names", "year"), drop.index=TRUE, row.names=TRUE)
+
+# within individuel
+b_within_i <- plm(price ~ income + pop + intrate, data = panel_df, model="within", effect="indiv")
+summary(b_within_i)
+
+# within temporel
+b_within_t <- plm(price ~ income + pop + intrate, data = panel_df, model="within", effect="time")
+summary(b_within_t)
+
+#within total
+b_within <- plm(price ~ income + pop + intrate, data = panel_df, model="within", effect="twoways")
+summary(b_within_t)
+
+#### ESTIMATIONS RANDOM EFFECTS ####
+
+# individuel
+Fgls_i <- plm(price ~ income + pop + intrate, data = panel_df, model="random", effect="indiv")
+summary(Fgls_i)
+
+# temporel
+Fgls_t <- update(Fgls_i, effect = 'time')
+summary(Fgls_t)
+
+# total
+Fgls <- update(Fgls_i, effect = 'twoways')
+summary(Fgls)
+
+#### F-TESTS ####
+
+# individuel
+pFtest(price ~ income + pop + intrate, data = panel_df, effect="indiv")
+
+# temporel
+pFtest(price ~ income + pop + intrate, data = panel_df, effect="time")
+
+# total
+pFtest(price ~ income + pop + intrate, data = panel_df, effect="twoways")
+
+#### HAUSMAN TEST ####
+
+# individuel
+pwi <- plm(price ~ income + pop + intrate, data = panel_df, model = 'within', effect = 'indiv')
+pri <- plm(price ~ income + pop + intrate, data = panel_df, model = 'random', effect = 'indiv')
+phtest(pwi,pri)
+# -> ici on choisit random effects du coup
+
+# twoways
+pw <- plm(price ~ income + pop + intrate, data = panel_df, model = 'within', effect = 'twoways')
+pr <- plm(price ~ income + pop + intrate, data = panel_df, model = 'random', effect = 'twoways')
+phtest(pw,pr)
+# -> ici on choisit fixed effects (within)
+```
+
+
+\newpage
+\pagenumbering{arabic}
+# Introduction
+
+Les prix de l'immobilier sont déterminés par de nombreux facteurs économiques, démographiques et environnementaux. Dans le cadre de cette étude sur données de panel nous allons déterminer quels sont ces facteurs et dans quelle mesure ceux-ci impactent le niveau de prix des habitations. 
+
+\newpage
+
+# Le cadre statistique
+
+## Données utilisées
+
+Les données utilisées proviennent du package "pder" disponible sur CRAN. La base de données a pour identifiant "HousePricesUS" et comporte les observations annuelles de 4 variables pour 49 états américains de 1975 à 2003. 
+
+| Variables | Définitions                                                           |
+|:----------|:----------------------------------------------------------------------|
+| price     | indice des prix de l'immobilier corrigé de l'inflation (1980 = 100)   |
+| income    | revenu réel par habitant                                              |
+| pop       | population totale                                                     |
+| intrate   | taux d'emprunt réel                                                   |
+
+## Statistiques Descriptives
+
+Les statistiques descriptives du tableau \ref{Tab.2} indiquent que le revenu réel par habitant médian est de 9,72\$ de l'heure. L'écart-type est assez faible mais la valeur maximum est très élevée. Concernant la population, les valeurs sont très hétérogènes avec des états dont la population est très faible (Wyoming) et des états dont la population est très élevée (Californie). Le tableau \ref{Tab.3} souligne ces disparités. Le taux d'intérêt réel moyen de 1975 à 2003 est égal à 4,36\%.
+
+
+
+
+
+
+
+\newpage
+
+## Estimations
+
+\newpage
+
+## Commentaires
+
+\newpage
+
+# Conclusion
+
+Hello \cite{holly2010spatio}
+
+\newpage
+
+# Annexe : tableaux 
+
+\begin{table}[h]
+\caption{Statistiques Descriptives}\label{Tab.2}
+\centering
+\begin{tabular}[t]{l|r|r|r|r|r|r|r|r}
+\hline
+  & N & Mean & Std. dev. & Min. & Median & Max.\\
+\hline
+year & 1,421 & 1,989.000 & 8.370 & 1,975.000 &1,989.000 & 2,003.000\\
+\hline
+price & 1,421 & 99.894 & 19.657 & 58.092 & 96.867 & 224.118\\
+\hline
+income & 1,421 & 9.933 & 1.764 & 5.910 & 9.718 & 18.219\\
+\hline
+pop & 1,421 & 5,076,285.940 & 5,427,431.666 & 380,477.000 & 3,495,939.000 & 35,484,453.000\\
+\hline
+intrate & 1,421 & 4.363 & 2.597 & -5.544 & 4.572 & 11.225\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+\caption{Valeurs extrêmes}\label{Tab.3}
+\centering
+\begin{tabular}{l|r|r}
+\hline
+names & year & pop\\
+\hline
+California & 2003 & 35,484,453\\
+\hline
+California & 2002 & 35,001,986\\
+\hline
+California & 2001 & 34,533,054\\
+\hline
+California & 2000 & 33,999,879\\
+\hline
+California & 1999 & 33,499,204\\
+\hline
+... & ... & ...\\
+\hline
+Wyoming & 1979 & 451,850\\
+\hline
+Wyoming & 1978 & 430,897\\
+\hline
+Wyoming & 1977 & 411,530\\
+\hline
+Wyoming & 1976 & 395,446\\
+\hline
+Wyoming & 1975 & 380,477\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+
+
+
+
