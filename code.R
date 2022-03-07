@@ -22,6 +22,7 @@ df <- as.data.frame(HousePricesUS)
 # Enlever les colonnes non pertinentes
 df <- df %>% select(-c('state', 'plate', 'region', 'region.name'))
 
+
 #### STATISTIQUES ET EXPLORATION DES DONNEES ####
 
 # Valeurs manquantes
@@ -37,6 +38,12 @@ stats$df
 
 # Trend Plot
 graph <- prepare_trend_graph(df, ts_id = "year", 'price')
+graph$plot
+
+graph <- prepare_trend_graph(df, ts_id = "year", 'intrate')
+graph$plot
+
+graph <- prepare_trend_graph(df, ts_id = "year", 'income')
 graph$plot
 
 # Corr Plot
