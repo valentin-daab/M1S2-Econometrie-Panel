@@ -1,0 +1,205 @@
+---
+title:  |
+        |
+        |
+        |
+        |
+        |
+        | Les déterminants du prix de l'immobilier :
+        | une étude sur données de panel
+author: 
+  - DAAB Valentin
+date: 08/03/2022
+fontsize: 12pt
+margin: 2cm
+urlcolor: darkblue
+linkcolor: Mahogany
+citecolor: Mahogany
+spacing: single
+papersize: a4paper
+bibliography: bib.bib
+biblio-style: apalike
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    number_sections: yes
+    keep_tex: no
+    toc: no
+    toc_depth: 3
+    template: C:\Users\daabv\Desktop\GitHub1\markdown-templates\article\article-template.latex
+header-includes:
+   - \usepackage{float}
+   - \usepackage{graphicx}
+---
+\vspace{10cm}
+\begin{center}
+Cours : Économétrie des données de panel
+
+Professeur : Mr. El OUARDIGHI
+\end{center}
+\pagenumbering{gobble}
+
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+\newpage
+\pagenumbering{arabic}
+# Introduction
+
+Les prix de l'immobilier sont déterminés par de nombreux facteurs économiques, démographiques et environnementaux. Dans le cadre de cette étude sur données de panel nous allons déterminer quels sont ces facteurs et dans quelle mesure ceux-ci impactent le niveau de prix des habitations. 
+
+\newpage
+
+# Le cadre statistique
+
+## Données utilisées
+
+Les données utilisées proviennent du package "pder" disponible sur CRAN. La base de données a pour identifiant "HousePricesUS" et comporte les observations annuelles de 4 variables pour 49 états américains de 1975 à 2003. 
+
+| Variables | Définitions                                                           |
+|:----------|:----------------------------------------------------------------------|
+| price     | indice des prix de l'immobilier corrigé de l'inflation (1980 = 100)   |
+| income    | revenu réel par habitant                                              |
+| pop       | population totale                                                     |
+| intrate   | taux d'emprunt réel                                                   |
+
+## Statistiques Descriptives
+
+|         Les statistiques descriptives du tableau \ref{Tab.2} indiquent que le revenu réel par habitant médian est de 9,72\$ de l'heure. L'écart-type est assez faible mais la valeur maximum est très élevée. La Figure \ref{income_density} permet de visualiser graphiquement la répartition du revenu réel par habitant. Concernant la population, les valeurs sont très hétérogènes avec des états dont la population est très faible (Wyoming) et des états dont la population est très élevée (Californie). Le tableau \ref{Tab.3} souligne ces disparités. Le taux d'intérêt réel moyen de 1975 à 2003 est égal à 4,36\%, la Figure \ref{intrate_trend} nous montre l'évolution du taux d'intérêt sur cette période.
+
+La Figure \ref{corr_plot} est une matrice de corrélation des variables présentes dans notre base de données. Nous pouvons en tirer quelques informations pertinentes : le prix est corrélé faiblement mais positivement avec le temps, il y a donc présence d'inflation. La figure \ref{price_trend} confirme ce premier constat. De plus le prix est corrélé positivement avec le revenu et dans une moindre mesure avec la population. Enfin, à l'image de l'hypothèse que nous avons posé précédemment, le taux d'intérêt est corrélé négativement avec le prix. 
+
+
+
+
+
+
+\newpage
+
+## Estimations
+
+\newpage
+
+## Commentaires
+
+\newpage
+
+# Conclusion
+
+Hello \cite{holly2010spatio}
+
+ 
+
+\newpage
+
+# Annexe : tableaux 
+
+\begin{table}[h]
+\caption{Statistiques Descriptives}\label{Tab.2}
+\centering
+\begin{tabular}[t]{l|r|r|r|r|r|r|r|r}
+\hline
+  & N & Mean & Std. dev. & Min. & Median & Max.\\
+\hline
+year & 1,421 & 1,989.000 & 8.370 & 1,975.000 &1,989.000 & 2,003.000\\
+\hline
+price & 1,421 & 99.894 & 19.657 & 58.092 & 96.867 & 224.118\\
+\hline
+income & 1,421 & 9.933 & 1.764 & 5.910 & 9.718 & 18.219\\
+\hline
+pop & 1,421 & 5,076,285.940 & 5,427,431.666 & 380,477.000 & 3,495,939.000 & 35,484,453.000\\
+\hline
+intrate & 1,421 & 4.363 & 2.597 & -5.544 & 4.572 & 11.225\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+\caption{Valeurs extrêmes}\label{Tab.3}
+\centering
+\begin{tabular}{l|r|r}
+\hline
+names & year & pop\\
+\hline
+California & 2003 & 35,484,453\\
+\hline
+California & 2002 & 35,001,986\\
+\hline
+California & 2001 & 34,533,054\\
+\hline
+California & 2000 & 33,999,879\\
+\hline
+California & 1999 & 33,499,204\\
+\hline
+... & ... & ...\\
+\hline
+Wyoming & 1979 & 451,850\\
+\hline
+Wyoming & 1978 & 430,897\\
+\hline
+Wyoming & 1977 & 411,530\\
+\hline
+Wyoming & 1976 & 395,446\\
+\hline
+Wyoming & 1975 & 380,477\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\newpage
+
+
+# Annexe : Figures
+
+```{r income_density_curve, fig.align = 'center', out.width = "60%", fig.cap = "Courbe de densité du revenu réel par habitant\\label{income_density}"}
+include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf")
+```
+
+```{r intrate_trend, fig.align = 'center', out.width = "60%", fig.cap = "Variation du taux d'intérêt réel d'emprunt en fonction du temps\\label{intrate_trend}"}
+include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf")
+```
+
+```{r corr_plot, fig.align = 'center', out.width = "50%", fig.cap = "Matrice de corrélation des variables\\label{corr_plot}"}
+include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf")
+```
+
+```{r price_trend, fig.align = 'center', out.width = "60%", fig.cap = "Evolution des prix de l'immobilier en fonction du temps\\label{price_trend}"}
+include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf")
+```
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
