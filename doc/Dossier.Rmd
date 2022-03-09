@@ -51,7 +51,21 @@ knitr::opts_chunk$set(echo = FALSE)
 \pagenumbering{arabic}
 # Introduction
 
-Les prix de l'immobilier sont déterminés par de nombreux facteurs économiques, démographiques et environnementaux. Dans le cadre de cette étude sur données de panel nous allons déterminer quels sont ces facteurs et dans quelle mesure ceux-ci impactent le niveau de prix des habitations. 
+|       Les prix de l'immobilier sont déterminés par de nombreux facteurs économiques, démographiques et environnementaux. Dans le cadre de cette étude sur données de panel nous allons déterminer quels sont ces facteurs et dans quelle mesure ceux-ci impactent le niveau de prix des habitations. 
+
+Nous pouvons dès à présent poser des hypothèses claires pour comparer les résultats de la littérature en lien avec ce sujet et nos résultats empiriques personnels. Ces hypothèses sont les suivantes :
+
+- Une hausse du revenu réel par habitant provoque une hausse des prix de l'immobilier 
+- Une hausse de la population augmente en conséquence les prix de l'immobilier
+- Une hausse du taux d'emprunt réel diminue les prix
+
+L'ensemble de ces hypothèses découlent directement de la loi de l'offre et de la demande. D'une part, une hausse du revenu et de la population vont entraîner une hausse de la demande. D'autre part, la hausse du taux d'emprunt réel va diminuer le nombre d'acheteurs et peut aussi pousser des propriétaires à revendre leurs biens. En d'autres termes, la demande va diminuer, l'offre va augmenter et le prix va donc s'amoindrir.
+
+De manière générale, ces hypothèses sont vérifiées empiriquement dans la littérature qui porte sur l'appréciation des biens immobilier. Les sensibilités à ces facteurs sont variables, et dans de rares cas, les hypothèses sont rejetées. Ces différences sont expliquées par des caractéristiques locales qui varient selon les marchés (\cite{reichert1990impact}).
+
+
+
+
 
 \newpage
 
@@ -59,7 +73,7 @@ Les prix de l'immobilier sont déterminés par de nombreux facteurs économiques
 
 ## Données utilisées
 
-Les données utilisées proviennent du package "pder" disponible sur CRAN. La base de données a pour identifiant "HousePricesUS" et comporte les observations annuelles de 4 variables pour 49 états américains de 1975 à 2003. 
+|     Les données utilisées proviennent du package "pder" disponible sur CRAN. La base de données a pour identifiant "HousePricesUS" et comporte les observations annuelles de 4 variables pour 49 états américains de 1975 à 2003.
 
 | Variables | Définitions                                                           |
 |:----------|:----------------------------------------------------------------------|
@@ -70,9 +84,10 @@ Les données utilisées proviennent du package "pder" disponible sur CRAN. La ba
 
 ## Statistiques Descriptives
 
-|         Les statistiques descriptives du tableau \ref{Tab.2} indiquent que le revenu réel par habitant médian est de 9,72\$ de l'heure. L'écart-type est assez faible mais la valeur maximum est très élevée. La Figure \ref{income_density} permet de visualiser graphiquement la répartition du revenu réel par habitant. Concernant la population, les valeurs sont très hétérogènes avec des états dont la population est très faible (Wyoming) et des états dont la population est très élevée (Californie). Le tableau \ref{Tab.3} souligne ces disparités. Le taux d'intérêt réel moyen de 1975 à 2003 est égal à 4,36\%, la Figure \ref{intrate_trend} nous montre l'évolution du taux d'intérêt sur cette période.
+|       Les statistiques descriptives du tableau \ref{Tab.2} indiquent que le revenu réel par habitant médian est de 9,72\$ de l'heure. L'écart-type est assez faible mais la valeur maximum est très élevée. La Figure \ref{income_density} permet de visualiser graphiquement la répartition du revenu réel par habitant. Concernant la population, les valeurs sont très hétérogènes avec des états dont la population est très faible (Wyoming) et des états dont la population est très élevée (Californie). Le tableau \ref{Tab.3} souligne ces disparités. Le taux d'intérêt réel moyen de 1975 à 2003 est égal à 4,36\%, la Figure \ref{intrate_trend} nous montre l'évolution du taux d'intérêt sur cette période.
 
-La Figure \ref{corr_plot} est une matrice de corrélation des variables présentes dans notre base de données. Nous pouvons en tirer quelques informations pertinentes : le prix est corrélé faiblement mais positivement avec le temps, il y a donc présence d'inflation. La figure \ref{price_trend} confirme ce premier constat. De plus le prix est corrélé positivement avec le revenu et dans une moindre mesure avec la population. Enfin, à l'image de l'hypothèse que nous avons posé précédemment, le taux d'intérêt est corrélé négativement avec le prix. 
+La Figure \ref{corr_plot} est une matrice de corrélation des variables présentes dans notre base de données. Nous pouvons en tirer quelques informations pertinentes : le prix est corrélé faiblement mais positivement avec le temps, ainsi en retirant l'effet de l'inflation, les prix de l'immobilier sont en hausse depuis 1975. La figure \ref{price_trend} confirme ce premier constat. De plus le prix est corrélé positivement avec le revenu et dans une moindre mesure avec la population. Enfin, à l'image de l'hypothèse que nous avons posé précédemment, le taux d'intérêt est corrélé négativement avec le prix. 
+
 
 
 
@@ -160,19 +175,19 @@ Wyoming & 1975 & 380,477\\
 
 # Annexe : Figures
 
-```{r income_density_curve, fig.align = 'center', out.width = "60%", fig.cap = "Courbe de densité du revenu réel par habitant\\label{income_density}"}
+```{r income_density_curve, fig.align = 'center', out.width = "50%", fig.cap = "Courbe de densité du revenu réel par habitant\\label{income_density}"}
 include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf")
 ```
 
-```{r intrate_trend, fig.align = 'center', out.width = "60%", fig.cap = "Variation du taux d'intérêt réel d'emprunt en fonction du temps\\label{intrate_trend}"}
+```{r intrate_trend, fig.align = 'center', out.width = "50%", fig.cap = "Variation du taux d'intérêt réel d'emprunt en fonction du temps\\label{intrate_trend}"}
 include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf")
 ```
 
-```{r corr_plot, fig.align = 'center', out.width = "50%", fig.cap = "Matrice de corrélation des variables\\label{corr_plot}"}
+```{r corr_plot, fig.align = 'center', out.width = "35%", fig.cap = "Matrice de corrélation des variables\\label{corr_plot}"}
 include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf")
 ```
 
-```{r price_trend, fig.align = 'center', out.width = "60%", fig.cap = "Evolution des prix de l'immobilier en fonction du temps\\label{price_trend}"}
+```{r price_trend, fig.align = 'center', out.width = "50%", fig.cap = "Evolution des prix de l'immobilier en fonction du temps\\label{price_trend}"}
 include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf")
 ```
 \newpage
