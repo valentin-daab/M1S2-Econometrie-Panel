@@ -81,7 +81,10 @@ lm_test("twoways")
 phtest(within_i, Fgls_i) # individuel
 # -> ici on choisit random effects
 
+phtest(within_t, Fgls_t) # temporel
+# <- ici on choisit fixed effects
+
 phtest(within, Fgls) # twoways
-# -> ici on choisit fixed effects (within)
+# -> ici on choisit fixed effects
 
 
