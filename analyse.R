@@ -85,32 +85,3 @@ phtest(within, Fgls) # twoways
 # -> ici on choisit fixed effects (within)
 
 
-#### TEST MAP ####
-library("tidyverse")
-library("usmap")
-
-df1 <- df[df$year =="2003",]
-df1 <- as.data.table(df1)
-
-df1 <- df1[ , intrate := as.factor(intrate)]
-df1 <- df1[ , price := as.factor(price)]
-
-orange <- "#C9592E"
-
-
-
-
-plot_usmap(data = df1, values = "intrate")
-
-
-
-
-
-
-
-
-
-
-
-
-
