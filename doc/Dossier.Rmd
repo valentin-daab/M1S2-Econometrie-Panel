@@ -1,12 +1,5 @@
 ---
-title:  |
-        |
-        |
-        |
-        |
-        |
-        | Les déterminants du prix de l'immobilier :
-        | une étude sur données de panel
+title: Les déterminants du prix de l'immobilier aux Etats-Unis
 author: 
   - DAAB Valentin
 date: 08/03/2022
@@ -31,14 +24,25 @@ output:
 header-includes:
    - \usepackage{float}
    - \usepackage{graphicx}
+     \AtBeginDocument{\let\maketitle\relax}
 ---
-\vspace{10cm}
+\thispagestyle{empty}
 \begin{center}
-Cours : Économétrie des données de panel
-
-Professeur : Mr. El OUARDIGHI
+\includegraphics[width=17cm]{logo2.png} \\
+\vspace{6cm}
+\line(1,0){400} \\
+\vspace{4mm}
+{\Large \bf\  Les déterminants du prix de l'immobilier aux États-Unis }  \\
+Une étude sur données de panel\\
+\line(1,0){250} \\
+\vspace{5cm}
+{\Large \bf Économétrie des données de panel} \\ Enseignant : Mr. El OUARDIGHI \\
+\vspace{7cm}
+réalisé par \\
+\vspace{0,5cm} Valentin DAAB
+\vfill
+\pagebreak
 \end{center}
-\pagenumbering{gobble}
 
 
 ```{r setup, include=FALSE}
@@ -53,15 +57,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 |       Les prix de l'immobilier sont déterminés par de nombreux facteurs économiques, démographiques et environnementaux. Dans le cadre de cette étude sur données de panel nous allons déterminer quels sont ces facteurs et dans quelle mesure ceux-ci impactent le niveau de prix des habitations. 
 
-Nous pouvons dès à présent poser des hypothèses claires pour comparer les résultats de la littérature en lien avec ce sujet et nos résultats empiriques personnels. Ces hypothèses sont les suivantes :
+Nous pouvons dès à présent poser des hypothèses pour comparer les résultats de la littérature en lien avec ce sujet et nos résultats empiriques personnels. Ces hypothèses sont les suivantes :
 
-- Une hausse du revenu réel par habitant provoque une hausse des prix de l'immobilier 
-- Une hausse de la population augmente en conséquence les prix de l'immobilier
-- Une hausse du taux d'emprunt réel diminue les prix
+- Une hausse du revenu réel par habitant provoque une hausse des prix de l'immobilier.
+- Une hausse de la population augmente en conséquence les prix de l'immobilier.
+- Une hausse du taux d'emprunt réel diminue les prix.
 
-L'ensemble de ces hypothèses découlent directement de la loi de l'offre et de la demande. D'une part, une hausse du revenu et de la population vont entraîner une hausse de la demande. D'autre part, la hausse du taux d'emprunt réel va diminuer le nombre d'acheteurs et peut aussi pousser des propriétaires à revendre leurs biens. En d'autres termes, la demande va diminuer, l'offre va augmenter et le prix va donc s'amoindrir.
+L'ensemble de ces propositions découlent directement de la loi de l'offre et de la demande. D'une part, une hausse du revenu et de la population vont entraîner une hausse de la demande et donc des prix. D'autre part, la hausse du taux d'emprunt réel va diminuer le nombre d'acheteurs et peut aussi pousser des propriétaires à revendre leurs biens. En d'autres termes, la demande va diminuer, l'offre va augmenter et le prix va donc s'amoindrir.
 
-De manière générale, ces hypothèses sont vérifiées empiriquement dans la littérature qui porte sur l'appréciation des biens immobilier. Les sensibilités à ces facteurs sont variables, et dans de rares cas, les hypothèses sont rejetées. Ces différences sont expliquées par des caractéristiques locales qui varient selon les marchés (\cite{reichert1990impact}).
+De manière générale, ces hypothèses sont vérifiées empiriquement dans la littérature qui porte sur l'appréciation des biens immobilier. Les sensibilités à ces facteurs sont variables, et dans de rares cas, les hypothèses sont rejetées. Ces différences sont expliquées par des caractéristiques locales qui varient selon les marchés (\cite{reichert1990impact}). En effet, la population ainsi que les revenus varient au niveau des États mais peuvent aussi varier localement dans les villes ou les quartiers. Un État rural aura donc des résultats qui diffèrent d'un État urbanisé. Cependant, pour la variable purement macroéconomique qu'est le taux d'intérêt réel des emprunts, la relation avec le prix est uniforme peu importe la localisation des biens immobiliers.
+
+
 
 
 

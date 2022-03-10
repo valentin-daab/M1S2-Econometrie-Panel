@@ -3,7 +3,7 @@ load_data <- function(){
   data("HousePricesUS")
   as.data.frame(HousePricesUS)
   # Retire les colonnes inutiles
-  select(HousePricesUS, -c('state', 'plate', 'region', 'region.name'))
+  select(HousePricesUS, -c('state', 'region', 'region.name'))
 }
 
 
