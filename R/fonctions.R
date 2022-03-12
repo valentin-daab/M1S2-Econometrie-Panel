@@ -37,7 +37,7 @@ bar_chart <- function(data, sort_by, variable, stat, order_by_stat){
 
 # Estimations panel
 panel_df_lm <- function(model, effect){
-  plm(price ~ income + pop + intrate,
+  plm(price ~ income + log(pop) + intrate,
       data = panel_df,
       model = model,
       effect = effect)
@@ -46,7 +46,7 @@ panel_df_lm <- function(model, effect){
 
 # LM Tests
 lm_test <- function(x){
-  plmtest(price ~ income + pop + intrate,
+  plmtest(price ~ income + log(pop) + intrate,
           data = panel_df,
           effect=x,
           type="bp")

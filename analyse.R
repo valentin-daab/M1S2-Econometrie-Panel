@@ -6,12 +6,14 @@ library(ExPanDaR)
 library(panelr)
 library(skimr)
 library(stargazer)
-library(DataExplorer)
 library(plm)
 library(lmtest)
 library(kableExtra)
 library(plotly)
 library(pder)
+library(pander)
+
+
 #### FONCTIONS ####
 source("R/fonctions.R")
 
@@ -49,11 +51,16 @@ bar_chart(df, "names", "price", median, TRUE)
 bar_chart(df, "names", "income", median, TRUE)
 bar_chart(df, "names", "intrate", median, TRUE)
 
-
 #### ESTIMATIONS WITHIN ####
 # Création du data frame données de panel
 panel_df <- pdata.frame(df, index = c("names", "year"), drop.index=TRUE, row.names=TRUE)
 
+
+#### POOLED OLS ####
+lm <- lm(price ~ income + log(pop) + intrate, data = panel_df)
+
+
+#### ESTIMATIONS FIXED EFFECTS ####
 within_i <- panel_df_lm("within", "indiv") # individuel
 within_t <- panel_df_lm("within", "time") # temporel
 within <- panel_df_lm("within", "twoways") # total
@@ -65,26 +72,32 @@ Fgls_t <- panel_df_lm("random", "time") # temporel
 Fgls <- panel_df_lm("random", "twoways") # total
 
 
+#### TABLEAU DES ESTIMATIONS ####
+stargazer(lm, within, Fgls)
+
+
 #### F-TESTS ####
-pFtest(price ~ income + pop + intrate, data = panel_df, effect = "indiv") # individuel
-pFtest(price ~ income + pop + intrate, data = panel_df, effect = "time") # temporel
-pFtest(price ~ income + pop + intrate, data = panel_df, effect = "twoways") # total
+pftest_i <- pFtest(price ~ income + log(pop) + intrate, data = panel_df, effect = "indiv") # individuel
+pftest_t <- pFtest(price ~ income + log(pop) + intrate, data = panel_df, effect = "time") # temporel
+pftest <- pFtest(price ~ income + log(pop) + intrate, data = panel_df, effect = "twoways") # total
 
 
 #### LM-TESTS ####
-lm_test("indiv")
-lm_test("time")
-lm_test("twoways")
+lmtest_i <- lm_test("indiv")
+lmtest_t <- lm_test("time")
+lmtest <- lm_test("twoways")
+
+
+#### TABLEAUX DE RESULTAT DES TESTS ####
+pander(pftest_i)
 
 
 #### HAUSMAN TEST ####
-phtest(within_i, Fgls_i) # individuel
+phtest_i <- phtest(within_i, Fgls_i) # individuel
 # -> ici on choisit random effects
 
-phtest(within_t, Fgls_t) # temporel
+phtest_t <- phtest(within_t, Fgls_t) # temporel
 # <- ici on choisit fixed effects
 
-phtest(within, Fgls) # twoways
+phtest <- phtest(within, Fgls) # twoways
 # -> ici on choisit fixed effects
-
-
