@@ -116,7 +116,7 @@ intrate & 1,421 & 4.363 & 2.597 & -5.544 & 4.572 & 11.225\\
 \end{tabular}
 \end{table}
 ```
-|       Les statistiques descriptives du tableau \ref{Tab.2} indiquent que le revenu réel par habitant médian est de 9,72\$ de l'heure. L'écart-type est assez faible mais la valeur maximum est élevée. La Figure \ref{income_density} permet de visualiser graphiquement cette répartition asymétrique du revenu réel par habitant avec des valeurs élevées à droite. Concernant la population, les valeurs sont très hétérogènes avec des États dont la population est très faible (Wyoming) et des États dont la population est très élevée (Californie). Le tableau \ref{Tab.3} souligne les valeurs extrêmes de ces variations. Le taux d'intérêt réel moyen de 1976 à 2003 est égal à 4,36%, la Figure \ref{intrate_trend} nous montre l'évolution de celui-ci sur cette période. On constate aussi que ce taux d'intérêt corrigé de l'inflation a été négatif vers les années 80. Cette période correspond au deuxième choc pétrolier caractérisée par une forte hausse du niveau général des prix. Enfin, la variation pour chaque année entre États, représentée par les traits sur chaque points est très faible. Ceci confirme encore une fois le caractère macroéconomique du taux d'intérêt.
+|       Les statistiques descriptives du tableau \ref{Tab.2} indiquent que le revenu réel par habitant médian est de 9,72\$ de l'heure. L'écart-type est assez faible mais la valeur maximum est élevée. La Figure \ref{income_density} permet de visualiser graphiquement cette répartition asymétrique du revenu réel par habitant avec des valeurs élevées à droite. Concernant la population, les valeurs sont très hétérogènes avec des États dont la population est très faible (Wyoming) et des États dont la population est très élevée (Californie). Le tableau \ref{Tab.4} souligne les valeurs extrêmes de ces variations. Le taux d'intérêt réel moyen de 1976 à 2003 est égal à 4,36%, la Figure \ref{intrate_trend} nous montre l'évolution de celui-ci sur cette période. On constate aussi que ce taux d'intérêt corrigé de l'inflation a été négatif vers les années 80. Cette période correspond au deuxième choc pétrolier caractérisée par une forte hausse du niveau général des prix. Enfin, la variation pour chaque année entre États, représentée par les traits sur chaque points est très faible. Ceci confirme encore une fois le caractère macroéconomique du taux d'intérêt.
 
 La Figure \ref{corr_plot} est une matrice de corrélation des variables présentes dans notre base de données. Nous pouvons en tirer quelques informations pertinentes : le prix est corrélé faiblement mais positivement avec le temps, ainsi en retirant l'effet de l'inflation, les prix de l'immobilier sont en hausse depuis 1976. La figure \ref{price_trend} confirme ce premier constat et contraste avec l'évolution du taux d'intérêt par les variations de prix entre chaque État représentées par les traits au niveau de chaque point. Les prix sont donc très hétérogènes. De plus, le prix est corrélé positivement avec le revenu et dans une moindre mesure avec la population. Enfin, à l'image de l'hypothèse que nous avons posé précédemment, le taux d'intérêt est corrélé négativement avec le prix. Cette première analyse des corrélations confirment donc nos prédictions, mais il faut confirmer ces effets en utilisant des modèles plus précis.
 
@@ -206,7 +206,7 @@ Ainsi, c'est la validité statistique du deuxième modèle qui nous a incité à
 
 # Conclusion
 
-Les résultats de notre étude sont donc les suivants : une hausse de la population et des revenus conduisent à une hausse des prix de l'immobilier. Les prix diminuent à la suite suite  d'une hausse du taux d'intérêt des emprunts. Ces résultats sont conformes à nos hypothèses et à la littérature que nous avons cité.
+Les résultats de notre étude sont donc les suivants : une hausse de la population et des revenus conduisent à une hausse des prix de l'immobilier. Les prix diminuent à la suite d'une hausse du taux d'intérêt des emprunts. Ces résultats sont conformes à nos hypothèses et à la littérature que nous avons cité.
 
 La hausse des revenus est le facteur qui influence le plus les prix de l'immobilier aux États-Unis, suivi par le taux d'intérêt et enfin la croissance démographique. La faiblesse de l'influence de la croissance démographique est avant tout explicable par le fait qu'il faut une hausse massive de la population pour voir un réel changement de la demande sur le marché de l'immobilier.
 
@@ -224,7 +224,7 @@ Enfin, effectuer cette même analyse sur une autre zone géographique permettera
 
 ```{=tex}
 \begin{table}[h]
-\caption{Valeurs extrêmes}\label{Tab.3}
+\caption{Valeurs extrêmes}\label{Tab.4}
 \centering
 \begin{tabular}{l|r|r}
 \hline
