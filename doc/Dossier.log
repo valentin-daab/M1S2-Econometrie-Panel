@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.28)  12 MAR 2022 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.28)  17 MAR 2022 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1192,6 +1192,8 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count351
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 180.
+
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
 d-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
@@ -1204,49 +1206,49 @@ LaTeX Warning: Label `Tab.3' multiply defined.
 )
 \openout1 = `Dossier.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 195.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 197.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
- 195.
+ 197.
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 197.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-195.
+197.
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 197.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 195.
+ 197.
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 197.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 195.
+e 197.
 
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
 \c@mv@tabular=\count353
 \c@mv@boldtabular=\count354
 
@@ -1295,8 +1297,8 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package backref Info: ** backref set up for natbib ** on input line 195.
-Package hyperref Info: Link coloring ON on input line 195.
+Package backref Info: ** backref set up for natbib ** on input line 197.
+Package hyperref Info: Link coloring ON on input line 197.
 
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -1312,9 +1314,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 195.
-LaTeX Info: Redefining \pageref on input line 195.
-LaTeX Info: Redefining \nameref on input line 195.
+LaTeX Info: Redefining \ref on input line 197.
+LaTeX Info: Redefining \pageref on input line 197.
+LaTeX Info: Redefining \nameref on input line 197.
 (./Dossier.out) (./Dossier.out)
 \@outlinefile=\write4
 \openout4 = `Dossier.out'.
@@ -1322,21 +1324,21 @@ LaTeX Info: Redefining \nameref on input line 195.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 isodate: babel.sty has been loaded
-<logo2.png, id=71, 3029.3175pt x 291.0875pt>
+<logo2.png, id=75, 3029.3175pt x 291.0875pt>
 File: logo2.png Graphic file (type png)
 <use logo2.png>
-Package pdftex.def Info: logo2.png  used on input line 204.
+Package pdftex.def Info: logo2.png  used on input line 206.
 (pdftex.def)             Requested size: 483.69684pt x 46.47723pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 208.
+(Font)              scaled to size 17.28pt on input line 210.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 208.
+(Font)              scaled to size 17.28pt on input line 210.
 [1
 
 {c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map} <./logo2.png>]
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 240.
+ on input line 242.
 
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/libertine/TS1Linux
 LibertineT-TLF.fd
@@ -1344,9 +1346,9 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 240.
+(Font)              scaled to size 12.0pt on input line 242.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 274.
+ on input line 276.
 
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/libertine/OT1Linux
 LibertineT-TLF.fd
@@ -1354,27 +1356,27 @@ File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 274.
+(Font)              scaled to size 12.0pt on input line 276.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 274.
+(Font)              scaled to size 8.8pt on input line 276.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 274.
+(Font)              scaled to size 6.6pt on input line 276.
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-274.
+276.
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-274.
+276.
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-274.
+276.
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 282--286
 
  []
 
@@ -1382,24 +1384,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.291 \newpage
+l.293 \newpage
                [1]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 297.
+(Font)              scaled to size 14.4pt on input line 299.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 297.
+(Font)              scaled to size 14.4pt on input line 299.
 [2]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 384.
+(Font)              scaled to size 12.0pt on input line 386.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 423.
+(Font)              scaled to size 12.0pt on input line 425.
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 511--519
+Underfull \hbox (badness 10000) in paragraph at lines 513--521
 
  []
 
 [4] [5]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 60
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 61
 2.
 
 (c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.
@@ -1407,80 +1409,80 @@ fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 602.
+(Font)              scaled to size 11.39996pt on input line 612.
 
-Overfull \hbox (4.36784pt too wide) in alignment at lines 600--616
+Overfull \hbox (4.36784pt too wide) in alignment at lines 610--626
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.36784pt too wide) in alignment at lines 616--630
+Overfull \hbox (4.36784pt too wide) in alignment at lines 626--640
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.36784pt too wide) in alignment at lines 630--633
+Overfull \hbox (4.36784pt too wide) in alignment at lines 640--643
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.36784pt too wide) in alignment at lines 640--656
+Overfull \hbox (4.36784pt too wide) in alignment at lines 650--666
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.36784pt too wide) in alignment at lines 656--670
+Overfull \hbox (4.36784pt too wide) in alignment at lines 666--680
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.36784pt too wide) in alignment at lines 670--673
+Overfull \hbox (4.36784pt too wide) in alignment at lines 680--683
  [] [] [] [] [] 
  []
 
 [6] [7]
-<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf, id=166
+<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf, id=170
 , 433.62pt x 289.08pt>
 File: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf Gr
 aphic file (type pdf)
 <use C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf>
 Package pdftex.def Info: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_d
-ensity_curve.pdf  used on input line 870.
+ensity_curve.pdf  used on input line 880.
 (pdftex.def)             Requested size: 241.84843pt x 161.23528pt.
-<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf, id=167, 433.6
+<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf, id=171, 433.6
 2pt x 289.08pt>
 File: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf Graphic f
 ile (type pdf)
 <use C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf>
 Package pdftex.def Info: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_
-trend.pdf  used on input line 879.
+trend.pdf  used on input line 889.
 (pdftex.def)             Requested size: 241.84843pt x 161.23528pt.
-<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf, id=168, 289.08pt 
+<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf, id=172, 289.08pt 
 x 289.08pt>
 File: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf Graphic file 
 (type pdf)
 <use C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf>
 Package pdftex.def Info: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/corr_plo
-t.pdf  used on input line 888.
+t.pdf  used on input line 898.
 (pdftex.def)             Requested size: 169.29684pt x 169.29416pt.
-<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf, id=169, 433.62p
+<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf, id=173, 433.62p
 t x 289.08pt>
 File: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf Graphic fil
 e (type pdf)
 <use C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf>
 Package pdftex.def Info: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_tr
-end.pdf  used on input line 897.
+end.pdf  used on input line 907.
 (pdftex.def)             Requested size: 241.84843pt x 161.23528pt.
 [8 <c:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/income_density_curve.pdf> <c:
 /Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/intrate_trend.pdf> <c:/Users/daabv/
 Desktop/GitHub1/M1S2-PDER/figs/corr_plot.pdf>]
-<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/pop_trend.pdf, id=193, 433.62pt 
+<C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/pop_trend.pdf, id=197, 433.62pt 
 x 289.08pt>
 File: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/pop_trend.pdf Graphic file 
 (type pdf)
 <use C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/pop_trend.pdf>
 Package pdftex.def Info: C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/pop_tren
-d.pdf  used on input line 906.
+d.pdf  used on input line 916.
 (pdftex.def)             Requested size: 241.84843pt x 161.23528pt.
 [9 <c:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_trend.pdf> <c:/Users/da
 abv/Desktop/GitHub1/M1S2-PDER/figs/pop_trend.pdf>] (./Dossier.bbl (./Dossier.br
@@ -1493,15 +1495,15 @@ f)
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Dossier.out' has not changed.
-(rerunfilecheck)             Checksum: 7852ADFAF73553E4924DF51EB9C5A411;2244.
+(rerunfilecheck)             Checksum: FB40485FD6F4535DE7B3DE4E1DCB0CB7;2359.
 Package rerunfilecheck Info: File `Dossier.brf' has not changed.
 (rerunfilecheck)             Checksum: 07A459501583108C60AC3FCE259F24D1;50.
  ) 
 Here is how much of TeX's memory you used:
- 30345 strings out of 480236
- 562099 string characters out of 5894214
- 809753 words of memory out of 5000000
- 47638 multiletter control sequences out of 15000+600000
+ 30349 strings out of 480236
+ 562143 string characters out of 5894214
+ 809785 words of memory out of 5000000
+ 47640 multiletter control sequences out of 15000+600000
  525067 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,11n,117p,2571b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1522,10 +1524,10 @@ ertine/LinLibertineTI.pfb><c:/Users/daabv/AppData/Roaming/TinyTeX/texmf-dist/fo
 nts/type1/public/newtx/NewTXMI.pfb><c:/Users/daabv/AppData/Roaming/TinyTeX/texm
 f-dist/fonts/type1/public/newtx/txmiaX.pfb><c:/Users/daabv/AppData/Roaming/Tiny
 TeX/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on Dossier.pdf (11 pages, 388687 bytes).
+Output written on Dossier.pdf (11 pages, 389435 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

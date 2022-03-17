@@ -22,6 +22,8 @@ output:
     toc_depth: 3
     template: C:\Users\daabv\Desktop\GitHub1\markdown-templates\article\article-template.latex
 header-includes:
+   - \usepackage {hyperref}
+   - \hypersetup {colorlinks = true, linkcolor = orange, urlcolor = orange}
    - \usepackage{float}
    - \usepackage{graphicx}
      \AtBeginDocument{\let\maketitle\relax}
@@ -194,7 +196,7 @@ Les différents F-tests et Tests de Lagrange (Tableaux 5 à 10 en annexe), nous 
 
 Pour le modèle aléatoire, on considère que les comportements des agents sont aléatoires. Il s'agit là d'un premier problème pour l'utilisation de ce modèle. Dans nos hypothèses, il est supposé que les agents connaissent la loi de l'offre et de la demande et que les prix sont donc fixés de manière rationnelle.
 
-De plus dans le Tableau \ref{Tab.3}, la population n'est pas une variable significative dans l'estimation. Il n'est donc pas possible d'interpréter correctement cette variable.
+De plus dans le Tableau \ref{Tab.3}, la population n'est pas une variable significative dans l'estimation. Il n'est donc pas possible de l'interpréter correctement.
 
 Enfin, le dernier facteur qui nous a poussé à ne pas considérer ce modèle est le test d'Hausman (Tableau 11 en annexe). Le test d'Hausman est un test d'endogénéité. L'hypothèse nulle est que la covariance entre les variables explicatives et $\alpha$, le facteur qui contient l'hétérogénéité des variables omises est nulle. Dans ce cas, le modèle à effets aléatoires est préféré au modèle à effets fixes. Dans notre cas, l'hypothèse nulle est rejetée, il faut donc utiliser le modèle à effets fixes.\
 
@@ -204,9 +206,11 @@ Ainsi, c'est la validité statistique du deuxième modèle qui nous a incité à
 
 # Conclusion
 
-Les résultats de notre étude sont donc les suivants : une hausse de la population et des revenus conduisent à une hausse des prix de l'immobilier. Les prix diminuent à la suite suite  d'une hausse des taux d'intérêt des emprunts. Ces résultats sont conformes à nos hypothèses et à la littérature que nous avons cité.
+Les résultats de notre étude sont donc les suivants : une hausse de la population et des revenus conduisent à une hausse des prix de l'immobilier. Les prix diminuent à la suite suite  d'une hausse du taux d'intérêt des emprunts. Ces résultats sont conformes à nos hypothèses et à la littérature que nous avons cité.
 
-La première critique qui peut être émise envers notre étude est le manque de variables dépendantes. En effet, les taxes, les aides du gouvernement, ou encore le nombre de nouvelles constructions sont des facteurs qui pourraient impacter le prix de l'immobilier. 
+La hausse des revenus est le facteur qui influence le plus les prix de l'immobilier aux États-Unis, suivi par le taux d'intérêt et enfin la croissance démographique. La faiblesse de l'influence de la croissance démographique est avant tout explicable par le fait qu'il faut une hausse massive de la population pour voir un réel changement de la demande sur le marché de l'immobilier.
+
+La première critique qui peut être émise envers notre étude est le manque de variables explicatives. En effet, les taxes, les aides du gouvernement, ou encore le nombre de nouvelles constructions sont des facteurs qui pourraient impacter le prix de l'immobilier dans une certaine mesure. 
 
 Ensuite, il serait plus pertinent d'avoir des observations plus locales pour pouvoir comparer les différences au sein d'un État et comparer les différences entre une zone rurale et une zone urbaine. Que ce soit au niveau de la population et des revenus qui impactent directement l'appréciation des biens immobiliers.
 
@@ -339,5 +343,9 @@ include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/price_tre
 ```{r pop_trend, fig.align = 'center', out.width = "50%", fig.cap = "Evolution de la population en fonction du temps\\label{pop_trend}"}
 include_graphics(path = "C:/Users/daabv/Desktop/GitHub1/M1S2-PDER/figs/pop_trend.pdf")
 ```
+
+# Annexe : Code
+
+L'intégralité du code utilisé est disponible sur ma page [GitHub](https://github.com/valentin-daab/M1S2-Econometrie-Panel)
 
 \newpage
